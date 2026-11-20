@@ -33,6 +33,7 @@ erDiagram
   ROLES ||--o{ PERMISSION_ROLE : grants
   PERMISSIONS ||--o{ PERMISSION_ROLE : assigned
   USERS ||--o{ AUDIT_LOGS : acts
+  EMPLOYEES o|--o{ DEPARTMENTS : manages
   DEPARTMENTS ||--o{ POSITIONS : contains
   DEPARTMENTS ||--o{ EMPLOYEES : employs
   EMPLOYEES o|--o{ EMPLOYEES : manages
@@ -54,6 +55,7 @@ erDiagram
   EMPLOYEES ||--o{ PAYROLL_RECORDS : paid
   PAYROLL_RECORDS ||--o{ PAYROLL_ITEMS : snapshots
   PAY_COMPONENTS o|--o{ PAYROLL_ITEMS : source
+  REVIEW_CYCLES o|--o{ PERFORMANCE_OBJECTIVES : defines
   EMPLOYEES ||--o{ PERFORMANCE_OBJECTIVES : owns
   REVIEW_CYCLES ||--o{ PERFORMANCE_REVIEWS : schedules
   EMPLOYEES ||--o{ PERFORMANCE_REVIEWS : reviewed
